@@ -1,6 +1,5 @@
 import logo from "../../img/connexion-app.svg";
 import React, { Component } from "react";
-import classnames from "classnames";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -32,33 +31,14 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
-        <li>
-          <Link
-            to="/getprofilebyhandle"
-            // id="nav-link"
-          >
-            <form id="searchbar" action="onClick" className="nav">
-              <input id="search-input" type="search" />
-              <i
-                className="fa fa-search"
-                to="/getprofilebyhandle"
-                id="search-icon"
-              ></i>
-            </form>
-          </Link>
-        </li>
-
+       
         <li className="nav-item nav">
           <Link className="nav-link d-md-block " to="/home" id="nav-link">
             <i className="fas fa-home"></i>
           </Link>
         </li>
 
-        <li className="nav-item nav">
-          <Link className="nav-link d-md-block " to="/CreatePost" id="nav-link">
-            <i className="fas fa-pencil-alt"></i>
-          </Link>
-        </li>
+       
 
         <li className="nav-item nav">
           <Link className="nav-link d-md-block " to="/settings" id="nav-link">
