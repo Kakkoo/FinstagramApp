@@ -31,17 +31,11 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
-        <SearchBar />
-        <li className="nav-item nav">
-          <Link
-            className="nav-link d-md-block "
-            to="/searchByHandle"
-            id="nav-link"
-          >
-            <i className="fas fa-home"></i>
+        <li className="nav-item">
+          <Link className="nav-link" to="/profiles">
+            Connexion Users
           </Link>
         </li>
-
         <li className="nav-item nav">
           <Link className="nav-link d-md-block " to="/CreatePost" id="nav-link">
             <i className="fas fa-pencil-alt"></i>
@@ -88,11 +82,6 @@ class Navbar extends Component {
               alt="connexion logo"
               id="logo"
             />
-          </Link>
-
-          <Link className="nav-link" to="/profiles">
-            {" "}
-            Connexion Users
           </Link>
 
           <button
