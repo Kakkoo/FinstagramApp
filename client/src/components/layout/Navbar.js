@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import {} from "../../actions/profileActions";
+import SearchBar from "./SearchBar";
+
 class Navbar extends Component {
   onLogoutClick(e) {
     e.preventDefault();
     this.props.logoutUser();
   }
-
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
@@ -31,14 +31,22 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
-       
+        <SearchBar />
         <li className="nav-item nav">
-          <Link className="nav-link d-md-block " to="/home" id="nav-link">
+          <Link
+            className="nav-link d-md-block "
+            to="/searchByHandle"
+            id="nav-link"
+          >
             <i className="fas fa-home"></i>
           </Link>
         </li>
 
-       
+        <li className="nav-item nav">
+          <Link className="nav-link d-md-block " to="/CreatePost" id="nav-link">
+            <i className="fas fa-pencil-alt"></i>
+          </Link>
+        </li>
 
         <li className="nav-item nav">
           <Link className="nav-link d-md-block " to="/settings" id="nav-link">
@@ -72,7 +80,7 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-light bg-light mb-4">
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/dashboard">
             <img
               src={logo}
               width="auto"
@@ -81,6 +89,12 @@ class Navbar extends Component {
               id="logo"
             />
           </Link>
+
+          <Link className="nav-link" to="/profiles">
+            {" "}
+            Connexion Users
+          </Link>
+
           <button
             className="navbar-toggler"
             type="button"

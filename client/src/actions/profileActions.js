@@ -128,11 +128,11 @@ export const setProfileLoading = () => {
   };
 };
 
-// // Clear profile
-// export const clearCurrentProfile = () => {
-//   return {
+// Clear profile
+export const clearCurrentProfile = () => {
+  return {
 
-//     type: CLEAR_CURRENT_PROFILE,
+    type: CLEAR_CURRENT_PROFILE,
 
-//   };
-// };
+  };
+};
