@@ -52,27 +52,7 @@ export const getProfileByHandle = (handle) => (dispatch) => {
     );
 };
 
-// export const getProfilesBySearch = (query) => (dispatch) => {
-//   dispatch(setProfileLoading());
 
-//   axios
-//     .get(`/api/profile/search?q=${query}`)
-//     .then((res) =>
-//       dispatch({
-//         type: GET_PROFILES,
-//         payload: res.data,
-//       })
-//     )
-//     .catch((err) =>
-//       dispatch({
-//         type: GET_PROFILES,
-//         payload: null,
-
-//       })
-//     );
-// };
-
-// Create Profile
 export const createProfile = (profileData, history) => (dispatch) => {
   axios
 
