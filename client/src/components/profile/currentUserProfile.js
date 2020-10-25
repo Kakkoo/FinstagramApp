@@ -18,12 +18,6 @@ class currentUserProfile extends Component {
     const { loading } = this.props.profile;
     const { profile } = this.props.profile;
     
-    // console.log(this.props.profile.profile);
-    console.log('p:', this.props.profile);
-    console.log('prof:', profile);
-    console.log('u', user);
-    // console.log(profile.following);
-   
 
     if(profile === null || loading){
       return(
@@ -31,8 +25,6 @@ class currentUserProfile extends Component {
       )
 
     } else if (Object.keys(profile).length > 0) {
-
-      const href = window.open.href=(`${profile.website}`);
 
       const profileCard=(
         <div className='card card-body mb-3 pl-5'>

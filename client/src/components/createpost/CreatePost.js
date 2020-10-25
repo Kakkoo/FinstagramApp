@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addPost, getCurrentPost } from '../../actions/postActions';
 import classnames from 'classnames';
-import Spinner from '../common/Spinner';
 import CurrentPost from './CurrentPost';
 
 
@@ -21,8 +20,6 @@ class CreatePost extends Component {
       (error, result) => {
         if (!error && result && result.event === 'success') {
           this.setState({ image: result.info.secure_url });
-
-          console.log(result.info.secure_url);
         }
       }
     );
@@ -114,15 +111,16 @@ class CreatePost extends Component {
 
 
       <div className='container'>
+        <h1 className="display-5 settings mb-4">Create a Post</h1>
         {this.state.image || this.state.text ? postPreview : null}
 
         <div className='media-upload mx-auto'>
-        <div className='card card-body mt-3 col-md-10 mx-auto'>
+        <div className='card card-body mt-3 col-md-10 col mx-auto'>
           <form onSubmit={this.onSubmit}>
             <div id='upload-widget'></div>
             <button
               id='upload_widget'
-              className='btn-light btn-lg bg-light btn-outline-dark btn-block col-3 mb-3 mx-auto'
+              className='btn-light btn btn-lg bg-light btn-outline-dark btn-block text-nowrap text-truncate col-6 col-lg-3 mb-3 mx-auto'
               onClick={() => this.widget.open()}
             >
               Upload image

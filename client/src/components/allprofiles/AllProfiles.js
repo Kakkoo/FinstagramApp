@@ -12,13 +12,13 @@ class AllProfiles extends Component {
   onFollowClick = (e, _id) => {
     e.preventDefault();
     this.props.followUser(this.props.profile.profile.user._id);
-    window.location.reload(false);
+    // window.location.reload(false);
   }
 
   onUnfollowClick = (e, user_id) => {
   e.preventDefault();
   this.props.unfollowUser(this.props.profile.profile.user._id);
-  window.location.reload(false);
+  // window.location.reload(false);
 }
   
   componentDidMount() {
@@ -38,9 +38,6 @@ class AllProfiles extends Component {
       this.props.profile.profile.followers.filter((follower) => follower.user_id === this.props.auth.user.id).length > 0
         ? true
         : false;
-
-    console.log('isFollow:', isFollow);
-    console.log(this.props.auth.user.id)
 
     if (isFollow) {
       return (
@@ -62,8 +59,6 @@ class AllProfiles extends Component {
 
   render() {
     const { profile, loading } = this.props.profile;
-    const { user } = this.props.profile;
-    let profileContent;
     let profileCard;
     let socialLinks;
 
@@ -71,12 +66,7 @@ class AllProfiles extends Component {
       return(
       <Spinner />);
     } else if (Object.keys(profile).length > 0){
-
-      console.log('profile:', this.props.profile.profile)
-      console.log('followers', this.props.profile.profile.followers)
-      
-      const href = window.open.href=(`${profile.website}`);
-        
+              
       profileCard=(
         <div className='card card-body mb-3 pl-5'>
           {isEmpty(profile.location) ? null : (

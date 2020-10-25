@@ -1,6 +1,5 @@
 
 import axios from 'axios';
-import { useParams } from "react-router-dom";
 
 import {
   GET_PROFILE,
@@ -110,7 +109,7 @@ export const deleteAccount = () => (dispatch) => {
 export const followUser = (_id) => (dispatch) => {
   axios
     .post(`/api/profile/user/${_id}/follow`)
-    .then((res) => dispatch(getProfiles()))
+    .then(window.location.reload(false))
     .catch((err) => 
       dispatch({
         type: GET_ERRORS,
@@ -124,7 +123,7 @@ export const followUser = (_id) => (dispatch) => {
 export const unfollowUser = (_id) => (dispatch) => {
   axios
     .delete(`/api/profile/user/${_id}/unfollow`)
-    .then((res) => dispatch(getProfiles()))
+    .then(window.location.reload(false))
     .catch((err) => 
       dispatch({
         type: GET_ERRORS,

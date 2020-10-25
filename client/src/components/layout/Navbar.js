@@ -10,6 +10,7 @@ class Navbar extends Component {
     e.preventDefault();
     this.props.logoutUser();
   }
+  
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
@@ -92,19 +93,18 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className='nav-item nav'>
-                <a
-                  href=""
+                <button
                   onClick={this.onLogoutClick.bind(this)}
-                  className="nav-link"
+                  className="nav-link btn bg-transparent outline-transparent"
                 >
                   Logout
-                </a>
+                </button>
               </li>
             </ul>
     );
 
     return (
-      <nav className='navbar navbar-expand-sm navbar-light bg-light mb-4'>
+      <nav className='navbar navbar-expand-sm navbar-light bg-light mb-4' >
         <div className='container'>
           <Link className='navbar-brand' to='/dashboard'>
 
