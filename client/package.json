@@ -9,7 +9,6 @@
     "axios": "^0.20.0",
     "classnames": "^2.2.6",
     "cloudinary-react": "^1.6.7",
-    "jquery": "^3.5.1",
     "jwt-decode": "^3.0.0",
     "moment": "^2.29.1",
     "react": "^16.13.1",
@@ -45,6 +44,6 @@
   },
   "proxy": "http://localhost:7200",
   "devDependencies": {
-    "file-loader": "^6.1.0"
+    "file-loader": "^6.2.0"
   }
 }
