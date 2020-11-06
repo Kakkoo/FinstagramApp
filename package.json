@@ -31,7 +31,9 @@
     "passport-jwt": "^4.0.0",
     "validator": "^13.1.1"
   },
-  "devDependencies": {},
+  "devDependencies":{
+    "nodemon": "^2.0.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kakkoo/FinstagramApp.git"
