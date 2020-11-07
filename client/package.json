@@ -11,6 +11,7 @@
     "cloudinary-react": "^1.6.7",
     "file-loader": "^6.2.0",
     "jwt-decode": "^3.0.0",
+    "loader": "^2.1.1",
     "moment": "^2.29.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

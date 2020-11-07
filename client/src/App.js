@@ -9,6 +9,7 @@ import ForgotPassword from './components/auth/ForgotPassword';
 import DeleteAccount from './components/deleteAccount/DeleteAccount';
 import currentUserProfile from './components/profile/currentUserProfile';
 import Profiles from './components/profiles/Profiles';
+
 import jwt_decode from 'jwt-decode';
 import { logoutUser } from './actions/authActions';
 import setAuthToken from './utils/setAuthToken';
