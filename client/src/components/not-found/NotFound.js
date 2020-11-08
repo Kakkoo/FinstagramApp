@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+const not = function(){
   return (
     <div>
       <h1 className="display-4">Page Not Found</h1>
@@ -8,3 +8,4 @@ export default () => {
     </div>
   );
 };
+export default not;

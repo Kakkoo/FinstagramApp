@@ -66,7 +66,7 @@ class Login extends Component {
                 Log In
               </h1>
               <p className="lead text-center">
-                <p className="lead text-muted">Log In to Connexion </p>
+                <span className="lead text-muted">Log In to Connexion </span>
               </p>
 
               <form noValidate onSubmit={this.onSubmit}>
