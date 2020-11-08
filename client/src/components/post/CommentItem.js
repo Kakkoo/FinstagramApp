@@ -13,7 +13,7 @@ class CommentItem extends Component {
     const { comment, postId, auth } = this.props;
 
     return (
-      <li class='list-group-item'>
+      <li className='list-group-item'>
         <div className='row' style={{ paddingBottom: '15px' }}>
           <div className='col-md-2 comment'>
             <Link to='/profile'>
