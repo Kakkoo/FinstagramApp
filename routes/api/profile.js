@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // Load Profile Model
 const Profile = require("../../models/Profile");
 // Load User Model
-const User = require("../../models/ser");
+const user = require("../../models/user");
 // Load Validation
 const validateProfileInput = require("../../validation/profile");
 const { text } = require("body-parser");
