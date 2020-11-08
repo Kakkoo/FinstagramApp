@@ -7,7 +7,7 @@ const validatePostInput = require('../../validation/post');
 const router = express.Router();
 const keys = require('../../config/keys');
 const cloudinary = require('cloudinary');
-
+const user = require('../../models/user');
 
 // @route   GET api/posts
 // @desc    Get posts
