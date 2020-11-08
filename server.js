@@ -14,8 +14,7 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
-//First route
-app.get('/', (req, res) => res.send('Hello'));
+
 
 //Use routes
 app.use('/api/users', users);
