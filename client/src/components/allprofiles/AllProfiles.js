@@ -222,8 +222,8 @@ class AllProfiles extends Component {
  AllProfiles.propTypes = {
   getProfileByHandle: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired,
-  isFollow: PropTypes.bool.isRequired
+  auth: PropTypes.object.isRequired
+ // isFollow: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = (state) => ({
