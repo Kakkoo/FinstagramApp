@@ -11,7 +11,7 @@ import {
     loading: false
   };
   
-  export default function(state = initialState, action) {
+  const profile = function(state = initialState, action) {
     switch (action.type) {
       case PROFILE_LOADING:
         return {
@@ -38,6 +38,7 @@ import {
       default:
         return state;
     }
-  }
+  };
+  export default profile;
   
 

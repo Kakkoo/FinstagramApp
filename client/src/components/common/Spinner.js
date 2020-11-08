@@ -1,7 +1,7 @@
 import React from 'react';
 import spinner from './spinner.gif';
 
-export default () => {
+const Spinner = function(){
   return (
     <div className="align-item-center mt-5">
       <div className="mx-auto text-secondary" style={{fontFamily: 'Abel', fontSize: '2em', textAlign: 'center'}}>Loading</div>
@@ -15,3 +15,4 @@ export default () => {
       
   );
 };
+export default Spinner;
