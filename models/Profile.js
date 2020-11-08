@@ -42,8 +42,8 @@ const ProfileSchema = Schema({
   following: [
     {
       user_id: {
-        type: String,
-        required: true,
+        type: String
+        //required: true,
       },
       date: {
         type: Date,
@@ -55,8 +55,8 @@ const ProfileSchema = Schema({
   followers: [
     {
       user_id: {
-        type: String,
-        required: true,
+        type: String
+        //required: true,
       },
       date: {
         type: Date,
